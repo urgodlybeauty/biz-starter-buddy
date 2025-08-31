@@ -8,6 +8,9 @@ import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import EINApplication from "./pages/EINApplication";
+import LLCApplication from "./pages/LLCApplication";
+import BusinessLicenses from "./pages/BusinessLicenses";
+import BusinessBanking from "./pages/BusinessBanking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,9 @@ const App = () => (
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/ein-application" element={<EINApplication />} />
+            <Route path="/llc-application" element={<LLCApplication />} />
+            <Route path="/business-licenses" element={<BusinessLicenses />} />
+            <Route path="/business-banking" element={<BusinessBanking />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
