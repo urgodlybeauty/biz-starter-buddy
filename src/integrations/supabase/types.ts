@@ -14,7 +14,234 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      banking_options: {
+        Row: {
+          bank_results: Json
+          created_at: string
+          id: string
+          updated_at: string
+          user_id: string
+          zip_code: string
+        }
+        Insert: {
+          bank_results: Json
+          created_at?: string
+          id?: string
+          updated_at?: string
+          user_id: string
+          zip_code: string
+        }
+        Update: {
+          bank_results?: Json
+          created_at?: string
+          id?: string
+          updated_at?: string
+          user_id?: string
+          zip_code?: string
+        }
+        Relationships: []
+      }
+      business_licenses: {
+        Row: {
+          business_state: string
+          business_type: string
+          business_zip: string
+          created_at: string
+          id: string
+          license_links: string[] | null
+          permit_requirements: string[] | null
+          required_licenses: string[] | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          business_state: string
+          business_type: string
+          business_zip: string
+          created_at?: string
+          id?: string
+          license_links?: string[] | null
+          permit_requirements?: string[] | null
+          required_licenses?: string[] | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          business_state?: string
+          business_type?: string
+          business_zip?: string
+          created_at?: string
+          id?: string
+          license_links?: string[] | null
+          permit_requirements?: string[] | null
+          required_licenses?: string[] | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      ein_applications: {
+        Row: {
+          banking_info: string | null
+          business_activity_code: string | null
+          business_address: string
+          business_city: string
+          business_name: string
+          business_purpose: string
+          business_state: string
+          business_type: string
+          business_zip: string
+          created_at: string
+          employees_expected: number | null
+          federal_tax_deposits: string | null
+          id: string
+          mailing_address: string | null
+          responsible_party_name: string
+          responsible_party_ssn: string | null
+          start_date: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          banking_info?: string | null
+          business_activity_code?: string | null
+          business_address: string
+          business_city: string
+          business_name: string
+          business_purpose: string
+          business_state: string
+          business_type: string
+          business_zip: string
+          created_at?: string
+          employees_expected?: number | null
+          federal_tax_deposits?: string | null
+          id?: string
+          mailing_address?: string | null
+          responsible_party_name: string
+          responsible_party_ssn?: string | null
+          start_date?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          banking_info?: string | null
+          business_activity_code?: string | null
+          business_address?: string
+          business_city?: string
+          business_name?: string
+          business_purpose?: string
+          business_state?: string
+          business_type?: string
+          business_zip?: string
+          created_at?: string
+          employees_expected?: number | null
+          federal_tax_deposits?: string | null
+          id?: string
+          mailing_address?: string | null
+          responsible_party_name?: string
+          responsible_party_ssn?: string | null
+          start_date?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      llc_applications: {
+        Row: {
+          business_address: string
+          business_city: string
+          business_purpose: string
+          business_state: string
+          business_zip: string
+          created_at: string
+          duration: string | null
+          effective_date: string | null
+          id: string
+          llc_name: string
+          management_structure: string
+          member_names: string[] | null
+          organizer_address: string
+          organizer_name: string
+          registered_agent_address: string
+          registered_agent_name: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          business_address: string
+          business_city: string
+          business_purpose: string
+          business_state: string
+          business_zip: string
+          created_at?: string
+          duration?: string | null
+          effective_date?: string | null
+          id?: string
+          llc_name: string
+          management_structure: string
+          member_names?: string[] | null
+          organizer_address: string
+          organizer_name: string
+          registered_agent_address: string
+          registered_agent_name: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          business_address?: string
+          business_city?: string
+          business_purpose?: string
+          business_state?: string
+          business_zip?: string
+          created_at?: string
+          duration?: string | null
+          effective_date?: string | null
+          id?: string
+          llc_name?: string
+          management_structure?: string
+          member_names?: string[] | null
+          organizer_address?: string
+          organizer_name?: string
+          registered_agent_address?: string
+          registered_agent_name?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          company_name: string | null
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+          phone: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          company_name?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          company_name?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
