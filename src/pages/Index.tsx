@@ -43,7 +43,7 @@ const Index = () => {
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
                     <Link to="/auth">
-                      <Button className="w-full bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-medium">
+                      <Button className="w-full px-8 py-4 text-lg font-medium">
                         Get Started Free
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
@@ -158,7 +158,7 @@ const Index = () => {
             Join thousands of entrepreneurs who have successfully started their businesses with our guidance.
           </p>
           <Link to="/auth">
-            <Button className="mt-8 bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-medium">
+            <Button className="mt-8 px-8 py-4 text-lg font-medium">
               Start Your Business Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
