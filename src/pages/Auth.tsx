@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,12 +10,24 @@ import { Building2, Loader2, User } from 'lucide-react';
 
 const Auth = () => {
   const { user, loading, signIn, signUp, signInAsGuest, isGuest } = useAuth();
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     fullName: '',
   });
+
+  // Debug logging
+  console.log('Auth component state:', { user: !!user, loading, isGuest });
+
+  // Force navigation when user becomes authenticated
+  useEffect(() => {
+    if ((user || isGuest) && !loading) {
+      console.log('User authenticated, navigating to dashboard');
+      navigate('/dashboard', { replace: true });
+    }
+  }, [user, isGuest, loading, navigate]);
 
   if (loading) {
     return (
